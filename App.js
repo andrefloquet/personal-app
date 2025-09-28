@@ -1,20 +1,18 @@
+import "./global.css"
+
+import { ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import Hero from './components/hero';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello Andre</Text>
+    <>
       <StatusBar style="auto" />
-    </View>
+      <ScrollView>
+        <Hero />
+      </ScrollView>
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
