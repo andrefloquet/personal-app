@@ -4,6 +4,7 @@ import { ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import Hero from './components/hero';
+import How from './components/how';
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <StatusBar style="auto" />
       <ScrollView>
         <Hero />
+        <How />
       </ScrollView>
     </>
   );
