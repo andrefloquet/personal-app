@@ -5,6 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 
 import Hero from './components/hero';
 import How from './components/how';
+import Footer from './components/footer';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <ScrollView>
         <Hero />
         <How />
+        <Footer />
       </ScrollView>
     </>
   );
