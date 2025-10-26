@@ -1,4 +1,4 @@
-import {View, Text, Image} from 'react-native'
+import {View, Text, Image, Linking} from 'react-native'
 
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import AntDesign from '@expo/vector-icons/AntDesign';
@@ -19,19 +19,34 @@ export default function Footer() {
                             className="w-24 h-24"
                          />
                     </View>
-                    <View className="flex flex-col gap-4">
-                        <Text>Link 1</Text>
-                        <Text>Link 2</Text>
-                        <Text>Link 3</Text>
-                        <Text>Link 4</Text>
-                    </View>
                 </View>
                 <View className="flex flex-col items-center justify-center mb-4">
                     <View className="flex flex-row items-center justify-center gap-4 mb-4">
-                        <FontAwesome name="linkedin-square" size={size} color={color} />
-                        <AntDesign name="github" size={size} color={color} />
-                        <Entypo name="instagram" size={size} color={color} />
-                        <Entypo name="facebook" size={size} color={color} />
+
+                        <FontAwesome 
+                            name="linkedin-square" 
+                            size={size} 
+                            color={color}
+                            onPress={() => Linking.openURL('https://www.linkedin.com/in/andre-floquet/')}
+                        />
+                        <AntDesign 
+                            name="github" 
+                            size={size} 
+                            color={color}
+                            onPress={() => Linking.openURL('https://github.com/andrefloquet')}
+                        />
+                        <Entypo 
+                            name="instagram" 
+                            size={size} 
+                            color={color}
+                            onPress={() => Linking.openURL('https://www.instagram.com/andrefloquet/')}
+                        />
+                        <Entypo 
+                            name="facebook" 
+                            size={size} 
+                            color={color} 
+                            onPress={() => Linking.openURL('https://www.facebook.com/andre.floquet')}
+                        />
                     </View>
                     <View>
                         <Text className="text-sm">{'\u00A9'} 2025 Andre Floquet. All rights reserved.</Text>
